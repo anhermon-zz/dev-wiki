@@ -1,0 +1,6 @@
+color-gray = #333333;
+
+.core
+    background-color color-gray
+    width 100%
+    height 100%
