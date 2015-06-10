@@ -1,0 +1,5 @@
+-Allocate tokens upon sign in
+-Figure out what is client id
+-Handle token expiration
+-configure ssl
+-registration flow
