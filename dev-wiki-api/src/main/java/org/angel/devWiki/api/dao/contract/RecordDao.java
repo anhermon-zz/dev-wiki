@@ -1,4 +1,4 @@
-package org.angel.devWiki.api.dao;
+package org.angel.devWiki.api.dao.contract;
 
 import org.angel.devWiki.api.model.Record;
 

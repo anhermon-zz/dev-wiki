@@ -6,14 +6,18 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
+import com.auth0.jwt.internal.com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class User implements Serializable{
 	private static final long serialVersionUID = -5961461077159730582L;
 	
-	private long id;
+	private long id = 0;
+	private boolean activated = false;
+	
 	private String username;
 	private String password;
 	private String email;
-	private boolean activated;
 	
 	public long getId() {
 		return id;
@@ -58,6 +62,11 @@ public class User implements Serializable{
 				return user;
 			}
 		};
+	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", activated=" + activated + ", username="
+				+ username + ", password=" + password + ", email=" + email + "]";
 	}
 
 }

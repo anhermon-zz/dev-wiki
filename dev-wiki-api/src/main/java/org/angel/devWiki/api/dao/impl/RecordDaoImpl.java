@@ -1,4 +1,4 @@
-package org.angel.devWiki.api.dao;
+package org.angel.devWiki.api.dao.impl;
 
 import org.springframework.stereotype.Repository;
 

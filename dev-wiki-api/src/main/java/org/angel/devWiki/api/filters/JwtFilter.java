@@ -27,10 +27,6 @@ public class JwtFilter extends GenericFilterBean {
         final HttpServletRequest request = (HttpServletRequest) req;
         final HttpServletResponse response = (HttpServletResponse) res;
         final String authHeader = request.getHeader("Authorization");        
-		if(request.getMethod().equals("OPTIONS")){
-			chain.doFilter(request, response);
-			return;
-		}
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
         	response.setStatus(403);
         	//throw new ServletException("Missing or invalid Authorization header.");

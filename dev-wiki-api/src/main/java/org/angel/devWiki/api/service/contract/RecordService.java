@@ -1,4 +1,4 @@
-package org.angel.devWiki.api.service;
+package org.angel.devWiki.api.service.contract;
 
 import org.angel.devWiki.api.model.Record;
 
