@@ -1,0 +1,34 @@
+{
+  "name": "Dev wiki",
+  "version": "0.0.1",
+  "authors": [
+    "anhermon <angel_mail@gmx.com>"
+  ],
+  "description": "programming knowledge base",
+  "main": "index.html",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "wiki"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.15",
+    "angular": "~1.4.0",
+    "bootstrap": "~3.3.4",
+    "jquery": "~2.1.4",
+    "fontawesome": "~4.3.0",
+    "angular.pubsub": "*",
+    "animate.css": "~3.3.0",
+    "angular-animate": "~1.4.1"
+  }
+}

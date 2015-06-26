@@ -1,0 +1,60 @@
+color-gray      = #9B9B9B
+color-darkgray  = darken(color-gray,82%)
+color-lightgray = darken(color-gray,-100%)
+menu-color      = color-darkgray
+tcolor          = color-lightgray
+
+#toggle-menu
+    height 100%
+    float left
+    background-color darken(menu-color, 30%)
+    cursor pointer
+    @media screen and (min-width: 768px)
+        width 1%
+    @media screen and (max-width: 768px)
+        width 5%
+
+#menu-container
+    position relative
+    transition all 0.5s ease
+    float left
+    background-color menu-color
+    height 100vh
+    color tcolor
+    font-size 18px
+    white-space nowrap
+    overflow hidden
+    @media screen and (min-width: 768px)
+        width 10%
+    @media screen and (max-width: 768px)
+        width 20%
+
+.menu
+    padding-left 0
+    display inline
+
+.menu-item
+    line-height 2em
+    padding-left 1em
+    opacity 0.6
+    cursor pointer
+    width 100vw
+    transition all 0.25s ease
+
+    &:hover
+        opacity 1
+        background-color darken(color-gray,15%)
+    div
+        width 90%
+        padding-left 16px
+
+.menu-close
+    width 0% !important
+
+.noselect
+        touch-callout none
+        user-select none
+.menu-icon
+    left-margin 10px
+.active
+    opacity 1 !important

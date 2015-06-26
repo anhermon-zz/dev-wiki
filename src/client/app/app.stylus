@@ -1,0 +1,27 @@
+blue-color   = #008AE7
+red-color    = #FF3333
+green-color  = #00E600
+yellow-color = #FFFF66
+white-color  = #FFFFFF
+gray-color   = #999999
+black-color  = #000000
+
+
+main-color = white-color
+*
+    font-family "Segoe UI", Arial, Helvetica, sans-serif
+    -webkit-font-smoothing antialiased
+
+body
+    background-color main-color
+    overflow hidden
+ul
+    list-style-type none
+.sample
+    transform-origin: center bottom
+
+.centered
+    position fixed
+    top      50%
+    left     50%
+    transform translate(-50%, -50%)
