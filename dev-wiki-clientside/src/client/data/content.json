@@ -1,0 +1,259 @@
+{
+	topics : {	
+		clientSide : {
+			comment: "Client side development",
+				[
+					{
+						topic : "Build/Task runner tools",
+						comment : "Helps automate the build proccess of a client side projects",
+						products : [
+							{
+								name : "grunt",
+								links : [
+									{
+										description : "Grunt homepage",
+										url : "http://gruntjs.com"
+									},
+									{
+										description : "Grunt vs Gulp",
+										url : "http://markdalgleish.github.io/presentation-build-wars-gulp-vs-grunt"
+									},
+									{
+										description : "Grunt vs Gulp",
+										url : "https://medium.com/@preslavrachev/gulp-vs-grunt-why-one-why-the-other-f5d3b398edc4"
+									}
+								],
+								snippets : [
+									{
+										desc : "",
+										snippet : ""
+									}
+								]
+							},
+							{
+								name : "gulp",
+								links : [
+									{
+										description : "Grunt homepage",
+										url : "http://gruntjs.com"
+									},
+									{
+										description : "Grunt vs Gulp",
+										url : "http://markdalgleish.github.io/presentation-build-wars-gulp-vs-grunt"
+									},
+									{
+										description : "Grunt vs Gulp",
+										url : "https://medium.com/@preslavrachev/gulp-vs-grunt-why-one-why-the-other-f5d3b398edc4"
+									}
+								],
+								snippets : [
+									{
+										desc : "",
+										snippet : ""
+									}
+								]
+							},
+							{
+								name : "npm",
+								links : [
+									"http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt",
+									"https://www.npmjs.com"
+								],
+								snippets : [
+									{
+										desc : "",
+										snippet : ""
+									}
+								]
+							}
+						]
+					},					
+					{
+						topic : "Front-end package manager"
+						comment : "Manages front-end dependencies such as jQuery angularJs etc..."
+						products : [
+							{
+								name : "npm",
+								links : [
+									"https://www.npmjs.com",
+									"http://stackoverflow.com/questions/18641899/what-is-the-difference-between-bower-and-npm"
+								],
+								snippets : [
+									{
+										desc : "",
+										snippet : ""
+									}
+								]
+							},
+							{
+								name : "bower",
+								links : [
+									"http://bower.io",
+									"http://stackoverflow.com/questions/18641899/what-is-the-difference-between-bower-and-npm"
+								],
+								snippets : [
+									{
+										desc : "",
+										snippet : ""
+									}
+								]
+							},
+							{
+								name : "browserify",
+								links : [
+									"http://browserify.org",
+									"http://ilikekillnerds.com/2014/11/bower-vs-browserify/,"
+								],
+								snippets : [
+									{
+										desc : "",
+										snippet : ""
+									}
+								]
+							}
+						]
+						
+					},
+					{
+						topic : "javascipt framework",
+						comment : "",
+						products : [
+							{
+								name : "angularJS",
+								links : [
+									"https://angularjs.org"
+								],
+								snippets : [
+									{
+										desc : "",
+										snippet : ""
+									}
+								]
+							}
+						]
+						
+					},
+					{
+						topic : "CSS preprocessors",
+						comments : "css preprocessing engines, improves css productivity by enabling using mixings etc.",
+						products : [
+							{
+								name : "sass",
+								links : [
+									"http://sass-lang.com"
+								],
+								snippets : [
+									{
+										desc : "",
+										snippet : ""
+									}
+								]
+							},
+							{
+								name : "less",
+								links : [
+									"http://lesscss.org"
+								],
+								snippets : [
+									{
+										desc : "",
+										snippet : ""
+									}
+								]
+							},
+							{
+								name : "stylus",
+								links : [
+									"http://learnboost.github.io/stylus"
+								],
+								snippets : [
+									{
+										desc : "",
+										snippet : ""
+									}
+								]
+							},
+							{
+								name : "css crush",
+								links : [
+									"http://the-echoplex.net/csscrush"
+								],
+								snippets : [
+									{
+										desc : "",
+										snippet : ""
+									}
+								]
+							},
+							{
+								name : "myth",
+								links : [
+									"http://www.myth.io"
+								],
+								snippets : [
+									{
+										desc : "",
+										snippet : ""
+									}
+								]
+							},
+							{
+								name : "rework",
+								links : [
+									"https://github.com/reworkcss/rework"
+								],
+								snippets : [
+									{
+										desc : "",
+										snippet : ""
+									}
+								]
+							}
+						]
+					},
+					{
+						topic : "CSS frameworks",
+						comments : "pre-prepared framework for easier, more standards-complient web design using css"
+						products : [
+							{
+								name : "Bootstrap",
+								links : [
+									"http://getbootstrap.com"
+								],
+								snippets : [
+									{
+										desc : "",
+										snippet : ""
+									}
+								]
+							},
+							{
+								name : "Skeleton",
+								links : [
+									"http://getskeleton.com"
+								],
+								snippets : [
+									{
+										desc : "",
+										snippet : ""
+									}
+								]
+							},
+							{
+								name : "Foundation",
+								links : [
+									"http://foundation.zurb.com/"
+								],
+								snippets : [
+									{
+										desc : "",
+										snippet : ""
+									}
+								]
+							}
+						]
+					}
+				]
+		}
+	}
+}
