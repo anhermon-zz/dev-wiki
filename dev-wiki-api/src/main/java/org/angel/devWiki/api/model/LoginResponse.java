@@ -25,4 +25,9 @@ public class LoginResponse {
 	public void setClaims(Map<String, String> claims) {
 		this.claims = claims;
 	}
+
+	@Override
+	public String toString() {
+		return "LoginResponse [token=" + token + ", claims=" + claims + "]";
+	}
 }

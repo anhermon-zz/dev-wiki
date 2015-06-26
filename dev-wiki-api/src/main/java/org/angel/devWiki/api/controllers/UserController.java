@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -30,8 +31,8 @@ public class UserController {
 	 * @return {@link LoginResponse}
 	 * @throws ServletException
 	 */
-	@RequestMapping(value = "login", method = RequestMethod.POST)
-	public LoginResponse login(@RequestBody final User login) throws ServletException {
+	@RequestMapping(value = "login", method = RequestMethod.POST, produces = "text/plain")
+	public @ResponseBody String login(@RequestBody final User login) throws ServletException {
 		logger.info("login request, User:" + login);
 		return userService.login(login);
 	}
