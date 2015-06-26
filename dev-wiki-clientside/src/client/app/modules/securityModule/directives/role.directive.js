@@ -38,12 +38,12 @@
                         element.css('display', 'block');
                     }
                     element.addClass(animation);
-                        $timeout(function() {
-                            element.removeClass(animation);
-                            if (!show) {
-                                element.css('display', 'none');
-                            }
-                        }, 1000);
+                    $timeout(function() {
+                        element.removeClass(animation);
+                        if (!show) {
+                            element.css('display', 'none');
+                        }
+                    }, 1000);
                 }
             }
         };
