@@ -1,4 +1,4 @@
 (function(angular) {
     'use strict';
-    angular.module('angSecurity',[]);
+    angular.module('angSecurity', ['PubSub']);
 })(angular);

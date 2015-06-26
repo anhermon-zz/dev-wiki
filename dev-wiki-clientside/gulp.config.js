@@ -4,7 +4,7 @@ module.exports = function() {
     var build = './dist/';
     var temp = './.tmp/';
     var assets = client + 'assests/';
-    var config = {        
+    var config = {
         /**
         * Files paths
         */
@@ -52,7 +52,7 @@ module.exports = function() {
         * browser sync
         */
         browserReloadDelay: 1000,
-        
+
         /**
         * Bower and NPM locations
         */
@@ -61,13 +61,13 @@ module.exports = function() {
             directory:    './bower_component/',
             ignorePath:   '../..'
         },
-        
+
         /**
         * Node settings
         */
         defaultPort: 3001,
         nodeServer:  server + 'app.js'
-        
+
     };
     return config;
 

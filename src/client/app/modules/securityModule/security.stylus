@@ -1,4 +1,0 @@
-.login-form
-    max-width 30vw
-    background-color darken(white, 10%)
-    padding 2%

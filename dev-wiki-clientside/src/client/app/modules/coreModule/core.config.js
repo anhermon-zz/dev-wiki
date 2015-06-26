@@ -2,28 +2,33 @@
     'use strict';
     angular.module('angCore')
     .config(stateProviderConfig);
-////////
+    ////////
     /* @ngInject */
     function stateProviderConfig ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/');
-        
+        $urlRouterProvider.otherwise('/home')
+                          .when('/home' , '/home/index');
         $stateProvider
-            .state('/', {
-                url: '/',
+            .state('home', {
+                abstract: true,
+                url: '/home',
                 views: {
-                    'nav':     {templateUrl: 'app/modules/coreModule/templates/core.nav.tpl.html'},
-                    'center':  {template: ''}
-                    
+                    'nav':     {templateUrl: 'app/modules/coreModule/templates/core.nav.tpl.html'}
                 }
             })
-            .state('login', {
+            .state('home.index', {
+                url: '/index'
+            })
+            .state('home.login', {
                 url: '/auth',
                 views: {
-                    'nav':     {templateUrl: 'app/modules/coreModule/templates/core.nav.tpl.html'},
-                    'center':  {template: '<ang-security-login></ang-security-login>'}
+                    'center@':  {template: '<ang-security-login></ang-security-login>'}
                 }
-            }); 
-        
-        $urlRouterProvider.otherwise('/');
+            })
+            .state('home.register', {
+                url: '/register',
+                views: {
+                    'center@':  {template: '<ang-security-register></ang-security-register>'}
+                }
+            });
     }
 })(angular);

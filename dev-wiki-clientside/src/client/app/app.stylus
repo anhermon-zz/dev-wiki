@@ -4,11 +4,11 @@ green-color  = #00E600
 yellow-color = #FFFF66
 white-color  = #FFFFFF
 gray-color   = #999999
-black-color  = #000000 
+black-color  = #000000
 
 
 main-color = white-color
-* 
+*
     font-family "Segoe UI", Arial, Helvetica, sans-serif
     -webkit-font-smoothing antialiased
 
@@ -19,7 +19,7 @@ ul
     list-style-type none
 .sample
     transform-origin: center bottom
-    
+
 .centered
     position fixed
     top      50%

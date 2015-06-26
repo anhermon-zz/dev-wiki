@@ -5,13 +5,13 @@
     .controller('menuController', menuController);
     ////////////////////////
     /*@ngInject*/
-    function menuController($scope, $rootScope) {
+    function menuController($scope, $rootScope, PubSub) {
         var vm           = this;
         vm.menuState     = true;
         vm.toggle        = toggle;
         vm.setActiveItem = setActiveItem;
         vm.setRoute      = setRoute;
-    /////
+        /////
         function toggle() {
             vm.menuState = !vm.menuState;
         }
@@ -24,8 +24,7 @@
         }
         function setRoute(route) {
             //broadcasts an event when item is selected
-            $rootScope.$broadcast('menu-item-selected-event', {route: route});
+            PubSub.publish('menu-item-selected-event', {route: route});
         }
-        
     }
 })(angular);

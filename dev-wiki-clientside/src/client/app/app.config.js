@@ -6,7 +6,7 @@
     /* @ngInject */
     function exceptionHandler($provide) {
         $provide.decorator('$exceptionHandler', ['$delegate' , function ($delegate) {
-            return function (exception, cause){
+            return function (exception, cause) {
                 $delegate(exception, cause);
                 //alert(exception.message);
             };

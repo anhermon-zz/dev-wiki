@@ -1,5 +1,5 @@
 {
-	topics : {	
+	topics : {
 		clientSide : {
 			comment: "Client side development",
 				[
@@ -67,7 +67,7 @@
 								]
 							}
 						]
-					},					
+					},
 					{
 						topic : "Front-end package manager"
 						comment : "Manages front-end dependencies such as jQuery angularJs etc..."
@@ -112,7 +112,7 @@
 								]
 							}
 						]
-						
+
 					},
 					{
 						topic : "javascipt framework",
@@ -131,7 +131,7 @@
 								]
 							}
 						]
-						
+
 					},
 					{
 						topic : "CSS preprocessors",

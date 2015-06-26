@@ -5,16 +5,9 @@
     .controller('angCoreController', angCoreController);
     ////////////////////////
     /*@ngInject*/
-    function angCoreController($scope, angCoreService) {
+    function angCoreController($scope, $state, angRouteService) {
         var vm = this;
-        vm.service = angCoreService;        
-        $scope.$on('menu-item-selected-event' , setRoute);//upon menu-item-selected-event set specified route
-        
-        function setRoute(ev, data) {
-            console.log('Setting route to:' + data.route);
-            vm.route = data.route;
-        }
+        vm.service = angRouteService;
+        vm.setRoute = vm.service.setRoute;
     }
-    
-
 })(angular);

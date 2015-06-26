@@ -39,15 +39,19 @@ gulp.task('vet', function() {//gulp.task: defines a new task
        .pipe($.if(args.verbose, $.print()))
        .pipe($.jscs())
        .pipe($.jshint())
-       .pipe($.jshint.reporter('jshint-stylish', {verbose: true}))
-       .pipe($.jshint.reporter('fail'));
+       .pipe($.jshint.reporter('jshint-stylish', {verbose: true}));
+//       .pipe($.jshint.reporter('fail'));
+});
+
+gulp.task('vet-watcher' , function () {
+         gulp.watch([config.alljs] , ['vet']);//fires vet task when JS files are changed
 });
 /**
 * Process stylus files to CSS
 */
 gulp.task('styles', ['clean-styles'], function() {//process css
     log('Compiling Stylus --> CSS', blue);
-    
+
     return gulp
         .src(config.stylus)//reads stylus files
         .pipe($.plumber())//gracefully handles errors
@@ -81,7 +85,7 @@ gulp.task('images', ['clean-images'], function() {
 });
 
 /**
-* Cleans files before generating new ones 
+* Cleans files before generating new ones
 */
 gulp.task('clean', function(done) {//clean dist and tmp directories
     var delconfig = [].concat(config.build, config.temp);
@@ -118,7 +122,7 @@ gulp.task('stylus-watcher', function() {
 */
 gulp.task('templatecache', ['clean-code'], function() {
     log('Creating AngularJS $templateCache');
-    
+
     return gulp
         .src(config.htmltemplates)
         .pipe($.minifyHtml({empty: true}))//empty: true makes sure empty tags wont be removed during HTML minify
@@ -131,13 +135,13 @@ gulp.task('templatecache', ['clean-code'], function() {
 /**
 * Inject JS and CSS into HTML
 */
-gulp.task('wiredep', function() { 
-                                  //Note:this task does note include custom style 
+gulp.task('wiredep', function() {
+                                  //Note:this task does note include custom style
                                   //to prevent stylus preprocessing everytime this task is executed
     log('Wiring up bower, css, js and app js into' + config.index, blue);
     var options = config.getWiredepDefaultOptions();
     var wiredep = require('wiredep').stream;
-    
+
     return gulp
         .src(config.index)//read index.html
         .pipe($.plumber())
@@ -163,10 +167,10 @@ gulp.task('inject', ['wiredep', 'styles'], function() { //wiredep task + css pre
 /**
 * Serve dev build, Kicks of nodeJS
 * nodemon - watches nodeJS app for changes, if changes are made nodemon will update the changes
-* browserSync - enable live preview of changes, including JS and stylus without refreshing, 
+* browserSync - enable live preview of changes, including JS and stylus without refreshing,
 * as well as syncing multiple browser
 */
-gulp.task('serve-dev', ['inject'], function() {
+gulp.task('serve-dev', ['inject', 'stylus-watcher', 'vet'], function() {
     var nodeOptions = {
             script: config.server + 'app.js',
             delayTime: 1,
@@ -198,11 +202,11 @@ gulp.task('serve-dev', ['inject'], function() {
 });
 
 gulp.task('serve', ['inject'], function() {
-    
+
 });
 ////////////
 /**
-* Determine if environemnt is dev or not, env is provided from command line args, 
+* Determine if environemnt is dev or not, env is provided from command line args,
 * if no relevant args are found defaults to dev
 */
 function isDev(){
@@ -215,20 +219,19 @@ function isDev(){
 function startBrowserSync(){
     if(args.nosync || browserSync.active) {
         return;
-    }    
+    }
     log('Starting browser-sync on port: ' + port);
-    gulp.watch([config.stylus], ['styles'])
-        .on('change', function(event) { 
-        changeEvent(event);
-    });
-    
+//    gulp.watch([config.stylus], ['styles'])
+//        .on('change', function(event) {
+//        changeEvent(event);
+//    });
     var options = {
         proxy: 'localhost:' + port,
         port: 3000,
         files: [
             config.client + '**/*.*',
             '!' + config.stylus,
-            config.temp   + '**/*.css'], 
+            config.temp   + '**/*.css'],
         ghostMode: {
             clicks: true,
             location: false,
@@ -242,7 +245,7 @@ function startBrowserSync(){
         notify: true,
         reloadDelay: 0
     };
-    
+
     browserSync(options);
 }
 
