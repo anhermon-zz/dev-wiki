@@ -24,7 +24,7 @@
         }
         function setRoute(route) {
             //broadcasts an event when item is selected
-            PubSub.publish('menu-item-selected-event', {route: route});
+            PubSub.publish('event-route-change', {route: route});
         }
     }
 })(angular);

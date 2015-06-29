@@ -12,6 +12,7 @@
 
         <!-- inject:css -->
         <link rel="stylesheet" href="/.tmp/app/app.css">
+        <link rel="stylesheet" href="/.tmp/app/modules/contentModule/content.css">
         <link rel="stylesheet" href="/.tmp/app/modules/coreModule/core.css">
         <link rel="stylesheet" href="/.tmp/app/modules/menuModule/menu.css">
         <link rel="stylesheet" href="/.tmp/app/modules/securityModule/security.css">
@@ -29,19 +30,23 @@
         <!-- endbower -->
 
         <!-- inject:js -->
-        <script src="/src/client/app/modules/coreModule/core.module.js"></script>
-        <script src="/src/client/app/modules/securityModule/security.module.js"></script>
+        <script src="/src/client/app/modules/contentModule/content.module.js"></script>
         <script src="/src/client/app/modules/menuModule/menu.module.js"></script>
+        <script src="/src/client/app/modules/securityModule/security.module.js"></script>
+        <script src="/src/client/app/modules/coreModule/core.module.js"></script>
+        <script src="/src/client/app/modules/menuModule/menu.controller.js"></script>
+        <script src="/src/client/app/modules/securityModule/security.config.js"></script>
+        <script src="/src/client/app/modules/securityModule/security.constants.js"></script>
+        <script src="/src/client/app/modules/securityModule/security.service.js"></script>
         <script src="/src/client/app/modules/coreModule/core.config.js"></script>
         <script src="/src/client/app/modules/coreModule/core.controller.js"></script>
         <script src="/src/client/app/modules/coreModule/core.route.service.js"></script>
         <script src="/src/client/app/modules/coreModule/core.service.js"></script>
-        <script src="/src/client/app/modules/securityModule/security.config.js"></script>
-        <script src="/src/client/app/modules/securityModule/security.constants.js"></script>
-        <script src="/src/client/app/modules/securityModule/security.service.js"></script>
-        <script src="/src/client/app/modules/menuModule/menu.controller.js"></script>
-        <script src="/src/client/app/modules/coreModule/directives/core.animate.directives.js"></script>
-        <script src="/src/client/app/modules/coreModule/directives/core.directive.js"></script>
+        <script src="/src/client/app/modules/contentModule/controllers/content.main.controller.js"></script>
+        <script src="/src/client/app/modules/contentModule/directives/content.main.directive.js"></script>
+        <script src="/src/client/app/modules/contentModule/services/content.service.js"></script>
+        <script src="/src/client/app/modules/menuModule/directives/menu.directive.js"></script>
+        <script src="/src/client/app/modules/menuModule/directives/menuItem.directive.js"></script>
         <script src="/src/client/app/modules/securityModule/controllers/security.core.controller.js"></script>
         <script src="/src/client/app/modules/securityModule/controllers/security.login.controller.js"></script>
         <script src="/src/client/app/modules/securityModule/controllers/security.register.controller.js"></script>
@@ -53,8 +58,8 @@
         <script src="/src/client/app/modules/securityModule/services/interceptor.service.js"></script>
         <script src="/src/client/app/modules/securityModule/services/security.event.service.js"></script>
         <script src="/src/client/app/modules/securityModule/services/user.service.js"></script>
-        <script src="/src/client/app/modules/menuModule/directives/menu.directive.js"></script>
-        <script src="/src/client/app/modules/menuModule/directives/menuItem.directive.js"></script>
+        <script src="/src/client/app/modules/coreModule/directives/core.animate.directives.js"></script>
+        <script src="/src/client/app/modules/coreModule/directives/core.directive.js"></script>
         <script src="/src/client/app/app.module.js"></script>
         <script src="/src/client/app/app.config.js"></script>
         <!-- endinject -->
@@ -64,21 +69,10 @@
                     ang-security-role="user"
                     label="Articles"
                     icon="fa-book"
-                    route="dashboard">
-                    <data-ang-menu-item
-                        ang-security-role="user"
-                        label="Articles"
-                        icon="fa-book"
-                        route="dashboard">
-                    </data-ang-menu-item>
-                    <data-ang-menu-item
-                        ang-security-role="user"
-                        label="Articles"
-                        icon="fa-book"
-                        route="dashboard">
-                    </data-ang-menu-item>
+                    route="home.articles">
                 </data-ang-menu-item>
             </data-ang-menu>
+            <div ui-view="center"></div>
         </data-ang-core>
     </body>
 </html>

@@ -15,14 +15,7 @@
   -webkit-animation: fadeOut 1s;
           animation: fadeOut 1s;
 }
-*[ui-view="center"] {
-  max-width: 80vw;
-  height: 100 hw;
-}
-*[ui-view="center"] > * {
+*[ui-view=center] {
   overflow: auto;
-  position: relative;
-  margin: 0;
-  margin-left: 20px;
-  display: inline-block;
+  padding: 20px;
 }

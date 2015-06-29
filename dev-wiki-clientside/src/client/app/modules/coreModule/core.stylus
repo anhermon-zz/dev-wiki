@@ -13,3 +13,6 @@ color-gray = #333333;
 *[ui-view]
     &.ng-leave
 	    animation: fadeOut 1s
+*[ui-view=center]
+    overflow auto
+    padding 20px
