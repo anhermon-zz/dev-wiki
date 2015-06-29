@@ -15,8 +15,6 @@
         return self;
         ////////////////
         function setRoute(ev, data) {
-            console.log(ev);
-            console.log('Setting route to:' + data.route);
             self.route = data.route;
             $state.go(self.route, data);
         }

@@ -4,10 +4,7 @@
     .directive('angSecurityRole', angSecurityRole);
     ////////////
     function angSecurityRole($timeout, PubSub) {
-        var NG_HIDE_CLASS = 'ng-hide';
-        var NG_ENTER_CLASS = 'ng-enter';
-        var NG_LEAVE_CLASS = 'ng-leave';
-        var NG_HIDE_IN_PROGRESS_CLASS = 'ng-hide-animate';
+        var DEFAULT_ANIMATION = 'fade';
         return {
             restrict: 'A',
             transclude: false,
@@ -33,10 +30,13 @@
                     var actualRole   = vm.getRole();
                     var requiredRole = attr.angSecurityRole;
                     var show         = requiredRole === actualRole;
-                    var animation    = 'animated fade' + (show ? 'In' : 'Out');
+
+                    var animation    = getAnimation();
+                    console.log(element.attr('class'));
                     if (show) {
                         element.css('display', 'block');
                     }
+                    console.log(animation);
                     element.addClass(animation);
                     $timeout(function() {
                         element.removeClass(animation);
@@ -44,6 +44,16 @@
                             element.css('display', 'none');
                         }
                     }, 1000);
+                    ////////////////
+                    function getAnimation() {
+                        var defaultAnimation = DEFAULT_ANIMATION + (show ? 'In' : 'Out');
+                        var animation = null;
+                        if (!!attr.animation && attr.animation !== null) {
+                            animation = scope.$eval(attr.animation);
+                            animation = show ? animation.enter : animation.leave;
+                        }
+                        return 'animated ' + (animation ?  animation : DEFAULT_ANIMATION);
+                    }
                 }
             }
         };

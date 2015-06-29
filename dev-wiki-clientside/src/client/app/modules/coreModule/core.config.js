@@ -21,13 +21,19 @@
             .state('home.login', {
                 url: '/auth',
                 views: {
-                    'center@':  {template: '<ang-security-login></ang-security-login>'}
+                    'center@':  {template: '<data-ang-security-login></data-ang-security-login>'}
                 }
             })
             .state('home.register', {
                 url: '/register',
                 views: {
-                    'center@':  {template: '<ang-security-register></ang-security-register>'}
+                    'center@':  {template: '<data-ang-security-register></data-ang-security-register>'}
+                }
+            })
+            .state('home.articles', {
+                url: '/articles',
+                views: {
+                    'center@':  {template: '<data-ang-content-main></data-ang-content-main>'}
                 }
             });
     }

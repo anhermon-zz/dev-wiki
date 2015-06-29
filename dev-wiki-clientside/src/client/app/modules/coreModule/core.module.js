@@ -7,6 +7,7 @@
     angular.module('angCore', [
                         'angMenu',
                         'angSecurity',
+                        'angContent',
                         'ui.router',
                         'PubSub',
                         'ngAnimate'

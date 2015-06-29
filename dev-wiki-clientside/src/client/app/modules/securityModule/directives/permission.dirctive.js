@@ -9,7 +9,7 @@
     function angSecurityPermission($timeout) {
         return {
             transclude: false,
-            replace:    true,
+            replace:    false,
             controller: 'angLoginCtrl',
             controllerAs: 'alc',
             template: '<div ng-include="alc.getDisplay()"/>',
