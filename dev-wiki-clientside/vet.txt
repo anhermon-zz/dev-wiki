@@ -1,3 +1,0 @@
-[20:21:04] Using gulpfile E:\workspace\web\Client Side\devWiki\gulpfile.js
-[20:21:04] Starting 'vet'...
-[20:21:04] Analyzing js with JSHint and JSCS

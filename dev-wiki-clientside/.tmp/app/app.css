@@ -22,3 +22,13 @@ ul {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+.user-widget > button {
+  font-size: 15px;
+  padding: 1px 5px;
+}
+.user-widget > span {
+  font-size: 15px;
+}
+.user-widget > * {
+  vertical-align: middle;
+}

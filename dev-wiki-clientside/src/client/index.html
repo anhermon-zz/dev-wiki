@@ -2,20 +2,21 @@
     <head>
          <meta charset="utf-8">
          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <!-- CSS -->
 
         <!-- bower:css -->
         <link rel="stylesheet" href="../../bower_component/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="../../bower_component/fontawesome/css/font-awesome.css" />
         <link rel="stylesheet" href="../../bower_component/animate.css/animate.css" />
+        <link rel="stylesheet" href="../../bower_component/toastr/toastr.css" />
+        <link rel="stylesheet" href="../../bower_component/angularjs-toaster/toaster.css" />
         <!-- endbower -->
 
         <!-- inject:css -->
         <link rel="stylesheet" href="/.tmp/app/app.css">
-        <link rel="stylesheet" href="/.tmp/app/modules/contentModule/content.css">
-        <link rel="stylesheet" href="/.tmp/app/modules/coreModule/core.css">
-        <link rel="stylesheet" href="/.tmp/app/modules/menuModule/menu.css">
-        <link rel="stylesheet" href="/.tmp/app/modules/securityModule/security.css">
+        <link rel="stylesheet" href="/.tmp/app/modules/content.module/content.css">
+        <link rel="stylesheet" href="/.tmp/app/modules/core.module/core.css">
+        <link rel="stylesheet" href="/.tmp/app/modules/menu.module/menu.css">
+        <link rel="stylesheet" href="/.tmp/app/modules/security.module/security.css">
         <!-- endinject -->
    </head>
     <body class="container-fluid">
@@ -27,41 +28,49 @@
         <script src="../../bower_component/bootstrap/dist/js/bootstrap.js"></script>
         <script src="../../bower_component/angular.pubsub/src/angular-pubsub.js"></script>
         <script src="../../bower_component/angular-animate/angular-animate.js"></script>
+        <script src="../../bower_component/toastr/toastr.js"></script>
+        <script src="../../bower_component/angularjs-toaster/toaster.js"></script>
         <!-- endbower -->
 
         <!-- inject:js -->
-        <script src="/src/client/app/modules/contentModule/content.module.js"></script>
-        <script src="/src/client/app/modules/menuModule/menu.module.js"></script>
-        <script src="/src/client/app/modules/securityModule/security.module.js"></script>
-        <script src="/src/client/app/modules/coreModule/core.module.js"></script>
-        <script src="/src/client/app/modules/menuModule/menu.controller.js"></script>
-        <script src="/src/client/app/modules/securityModule/security.config.js"></script>
-        <script src="/src/client/app/modules/securityModule/security.constants.js"></script>
-        <script src="/src/client/app/modules/securityModule/security.service.js"></script>
-        <script src="/src/client/app/modules/coreModule/core.config.js"></script>
-        <script src="/src/client/app/modules/coreModule/core.controller.js"></script>
-        <script src="/src/client/app/modules/coreModule/core.route.service.js"></script>
-        <script src="/src/client/app/modules/coreModule/core.service.js"></script>
-        <script src="/src/client/app/modules/contentModule/controllers/content.main.controller.js"></script>
-        <script src="/src/client/app/modules/contentModule/directives/content.main.directive.js"></script>
-        <script src="/src/client/app/modules/contentModule/services/content.service.js"></script>
-        <script src="/src/client/app/modules/menuModule/directives/menu.directive.js"></script>
-        <script src="/src/client/app/modules/menuModule/directives/menuItem.directive.js"></script>
-        <script src="/src/client/app/modules/securityModule/controllers/security.core.controller.js"></script>
-        <script src="/src/client/app/modules/securityModule/controllers/security.login.controller.js"></script>
-        <script src="/src/client/app/modules/securityModule/controllers/security.register.controller.js"></script>
-        <script src="/src/client/app/modules/securityModule/directives/login.directive.js"></script>
-        <script src="/src/client/app/modules/securityModule/directives/permission.dirctive.js"></script>
-        <script src="/src/client/app/modules/securityModule/directives/register.directive.js"></script>
-        <script src="/src/client/app/modules/securityModule/directives/role.directive.js"></script>
-        <script src="/src/client/app/modules/securityModule/services/auth.service.js"></script>
-        <script src="/src/client/app/modules/securityModule/services/interceptor.service.js"></script>
-        <script src="/src/client/app/modules/securityModule/services/security.event.service.js"></script>
-        <script src="/src/client/app/modules/securityModule/services/user.service.js"></script>
-        <script src="/src/client/app/modules/coreModule/directives/core.animate.directives.js"></script>
-        <script src="/src/client/app/modules/coreModule/directives/core.directive.js"></script>
+        <script src="/src/client/app/modules/common.module/common.module.js"></script>
+        <script src="/src/client/app/modules/content.module/content.module.js"></script>
+        <script src="/src/client/app/modules/core.module/core.module.js"></script>
+        <script src="/src/client/app/modules/menu.module/menu.module.js"></script>
+        <script src="/src/client/app/modules/security.module/security.module.js"></script>
+        <script src="/src/client/app/modules/content.module/content.route.config.js"></script>
+        <script src="/src/client/app/modules/core.module/core.controller.js"></script>
+        <script src="/src/client/app/modules/core.module/core.route.config.js"></script>
+        <script src="/src/client/app/modules/core.module/core.route.service.js"></script>
+        <script src="/src/client/app/modules/menu.module/menu.controller.js"></script>
+        <script src="/src/client/app/modules/security.module/security.config.js"></script>
+        <script src="/src/client/app/modules/security.module/security.constants.js"></script>
+        <script src="/src/client/app/modules/security.module/security.route.config.js"></script>
+        <script src="/src/client/app/modules/common.module/services/common.logger.service.js"></script>
+        <script src="/src/client/app/modules/content.module/controllers/content.main.controller.js"></script>
+        <script src="/src/client/app/modules/content.module/services/content.service.js"></script>
+        <script src="/src/client/app/modules/content.module/directives/content.main.directive.js"></script>
+        <script src="/src/client/app/modules/core.module/controllers/core.route.traverse.controller.js"></script>
+        <script src="/src/client/app/modules/core.module/directives/core.animate.directives.js"></script>
+        <script src="/src/client/app/modules/core.module/directives/core.directive.js"></script>
+        <script src="/src/client/app/modules/core.module/directives/core.route.trav.directive.js"></script>
+        <script src="/src/client/app/modules/menu.module/directives/menu.directive.js"></script>
+        <script src="/src/client/app/modules/menu.module/directives/menuItem.directive.js"></script>
+        <script src="/src/client/app/modules/security.module/controllers/security.core.controller.js"></script>
+        <script src="/src/client/app/modules/security.module/controllers/security.login.controller.js"></script>
+        <script src="/src/client/app/modules/security.module/controllers/security.register.controller.js"></script>
+        <script src="/src/client/app/modules/security.module/directives/login.directive.js"></script>
+        <script src="/src/client/app/modules/security.module/directives/permission.dirctive.js"></script>
+        <script src="/src/client/app/modules/security.module/directives/register.directive.js"></script>
+        <script src="/src/client/app/modules/security.module/directives/role.directive.js"></script>
+        <script src="/src/client/app/modules/security.module/services/auth.service.js"></script>
+        <script src="/src/client/app/modules/security.module/services/interceptor.service.js"></script>
+        <script src="/src/client/app/modules/security.module/services/security.event.service.js"></script>
+        <script src="/src/client/app/modules/security.module/services/user.service.js"></script>
         <script src="/src/client/app/app.module.js"></script>
-        <script src="/src/client/app/app.config.js"></script>
+        <script src="/src/client/app/config/app.config.js"></script>
+        <script src="/src/client/app/config/app.exceptionHandlerConfig.js"></script>
+        <script src="/src/client/app/config/app.vars.config.js"></script>
         <!-- endinject -->
         <data-ang-core title="Dev Wiki">
             <data-ang-menu>

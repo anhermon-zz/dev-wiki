@@ -25,3 +25,11 @@ ul
     top      50%
     left     50%
     transform translate(-50%, -50%)
+.user-widget
+    > button
+        font-size 15px
+        padding 1px 5px
+    > span
+        font-size 15px
+    > *
+       vertical-align middle
