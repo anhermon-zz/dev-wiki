@@ -4,7 +4,8 @@ import java.io.UnsupportedEncodingException;
 
 import javax.sql.DataSource;
 
-import org.angel.devWiki.api.config.DataBaseConfig;
+import org.angel.devWiki.api.config.CustomizedRestMvcConfiguration;
+import org.angel.devWiki.api.config.ProdDataBaseConfig;
 import org.angel.devWiki.api.config.SecurityConfig;
 import org.angel.devWiki.api.config.WebConfig;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,12 +15,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.env.Environment;
+import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 @SpringBootApplication
-@Import({DataBaseConfig.class, SecurityConfig.class, WebConfig.class})
+@Import({ProdDataBaseConfig.class, SecurityConfig.class, WebConfig.class, CustomizedRestMvcConfiguration.class})
 @Qualifier("dev-wiki.api.config")
-public class App {
+public class App extends RepositoryRestMvcConfiguration {
 	
 	@Autowired
 	private Environment env;
@@ -34,9 +36,9 @@ public class App {
 	 public JdbcTemplate jdbcTemplate() {
 		return new JdbcTemplate(userDataSource);
 	 }
-	 
+	 	 
 	 public static void main(String[] args) throws UnsupportedEncodingException {
-		 SpringApplication.run(App.class, args);
+		 SpringApplication.run(App.class);
 	 }
 	 
 	

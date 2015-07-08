@@ -1,0 +1,8 @@
+CREATE TABLE `dev_wiki`.`data_entity` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `entity_type` VARCHAR(45) NOT NULL,
+  `creation_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `author` VARCHAR(50) NOT NULL,
+  `title` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  CHARACTER SET = DEFAULT);
