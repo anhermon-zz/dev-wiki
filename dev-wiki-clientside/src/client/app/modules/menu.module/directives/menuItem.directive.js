@@ -3,7 +3,7 @@
     angular.module('ang.menu')
         .directive('angMenuItem', angMenuItemDirective);
     ////////////
-    function angMenuItemDirective() {
+    function angMenuItemDirective($timeout) {
         return {
             require:    '^angMenu',
             replace:    true,
@@ -17,6 +17,15 @@
             },
             link: function(scope, el, attrs, ctrl) {
                 var vm = ctrl; //ctrl reffers to angMenu (parent controller)
+                //Make sure menu items are hidden if menu is closed
+                scope.$watch(
+                    function () {
+                        return vm.menuState;
+                    }, function () {
+                        vm.menuState ? $timeout(function() {
+                            el.removeClass('hidden')
+                        }, 500) : el.addClass('hidden');
+                    });
                 scope.isActive = function () {
                     return el === vm.activeItem;
                 };

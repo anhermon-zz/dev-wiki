@@ -3,32 +3,40 @@
   -webkit-font-smoothing: antialiased;
 }
 body {
-  background-color: #fff;
+  background-color: white-color;
   overflow: hidden;
 }
 ul {
   list-style-type: none;
+}
+ul > li {
+  display: list-item;
 }
 .sample {
   -webkit-transform-origin: center bottom;
       -ms-transform-origin: center bottom;
           transform-origin: center bottom;
 }
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
 }
-.user-widget > button {
-  font-size: 15px;
-  padding: 1px 5px;
+.btn {
+  border-radius: 2px;
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
 }
-.user-widget > span {
-  font-size: 15px;
+.btn-primary {
+  background-color: #00b6a5;
+  border-color: #00b6a5;
 }
-.user-widget > * {
-  vertical-align: middle;
+.btn-primary > i {
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #00d4c0;
+  border-color: #00d4c0;
+}
+* {
+  text-decoration: none !important;
 }
