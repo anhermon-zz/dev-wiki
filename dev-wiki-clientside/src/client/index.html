@@ -15,8 +15,8 @@
         <!-- inject:css -->
         <link rel="stylesheet" href="/.tmp/app/app.css">
         <link rel="stylesheet" href="/.tmp/app/modules/content.module/content.css">
-        <link rel="stylesheet" href="/.tmp/app/modules/core.module/core.css">
         <link rel="stylesheet" href="/.tmp/app/modules/menu.module/menu.css">
+        <link rel="stylesheet" href="/.tmp/app/modules/core.module/core.css">
         <link rel="stylesheet" href="/.tmp/app/modules/security.module/security.css">
         <!-- endinject -->
    </head>
@@ -49,9 +49,9 @@
         <script src="/src/client/app/modules/security.module/security.constants.js"></script>
         <script src="/src/client/app/modules/security.module/security.route.config.js"></script>
         <script src="/src/client/app/modules/common.module/services/common.logger.service.js"></script>
-        <script src="/src/client/app/modules/content.module/directives/content.main.directive.js"></script>
         <script src="/src/client/app/modules/content.module/controllers/content.main.controller.js"></script>
         <script src="/src/client/app/modules/content.module/services/content.service.js"></script>
+        <script src="/src/client/app/modules/content.module/directives/content.main.directive.js"></script>
         <script src="/src/client/app/modules/core.module/controllers/core.route.traverse.controller.js"></script>
         <script src="/src/client/app/modules/core.module/directives/core.animate.directives.js"></script>
         <script src="/src/client/app/modules/core.module/directives/core.directive.js"></script>
@@ -79,11 +79,11 @@
                 <data-ang-menu-item
                     label="Articles"
                     icon="fa-book"
-                    route="home.articles">
+                    route="home.articles.read">
                         <data-ang-menu-item
                             label="Articles"
                             icon="fa-book"
-                            route="home.articles">
+                            route="home.articles.read">
                         </data-ang-menu-item>
                 </data-ang-menu-item>
             </data-ang-menu>
