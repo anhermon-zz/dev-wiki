@@ -3,22 +3,77 @@
   -webkit-font-smoothing: antialiased;
 }
 body {
-  background-color: #fff;
+  background-color: white-color;
   overflow: hidden;
 }
 ul {
   list-style-type: none;
+}
+ul > li {
+  display: list-item;
 }
 .sample {
   -webkit-transform-origin: center bottom;
       -ms-transform-origin: center bottom;
           transform-origin: center bottom;
 }
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.btn {
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+  outline: none;
+}
+.btn-primary {
+  border-radius: 2px;
+  background-color: #00b6a5;
+  border-color: #00b6a5;
+}
+.btn-primary > i {
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #00d4c0;
+  border-color: #00d4c0;
+}
+* {
+  text-decoration: none !important;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  margin: 0.5rem 0 1rem 0;
+  background-color: #fff;
+  -webkit-transition: box-shadow 0.25s;
+          transition: box-shadow 0.25s;
+  border-radius: 2px;
+}
+.card > div {
+  margin: 10px 40px 10px 40px;
+}
+.btn-floating,
+.btn-floating-small {
+  background-color: #00b6a5;
+  border-color: #00b6a5;
+  border-radius: 50%;
+  padding: 0;
+  vertical-align: text-bottom;
+  color: #fff;
+  outline: none !important;
+}
+.btn-floating:hover,
+.btn-floating-small:hover {
+  background-color: #00d4c0;
+  border-color: #00efd8;
+  color: #fff;
+}
+.btn-floating:visited,
+.btn-floating-small:visited {
+  color: #fff;
+}
+.btn-floating-small {
+  width: 33.3px;
+  height: 33.3px;
 }

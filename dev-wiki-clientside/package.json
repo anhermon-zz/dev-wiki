@@ -6,9 +6,13 @@
   "dependencies": {
     "angular": "^1.4.0",
     "jquery": "^2.1.4",
-    "bootstrap": "^3.3.4",
+    "bootstrap": "^3.3.5",
     "angular-ui-router": "^0.2.15",
-    "font-awesome": "^4.3.0"
+    "font-awesome": "^4.3.0",
+    "angular-jwt": "0.0.9",
+    "angular-pubsub": "^0.2.0",
+    "animate.css": "^3.2.5",
+    "angular-animate": "^1.4.1"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

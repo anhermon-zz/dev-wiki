@@ -1,0 +1,90 @@
+color-gray      = #424242
+color-darkgray  = #212121
+color-lightgray = #616161
+menu-color      = color-darkgray
+tcolor          = color-lightgray
+
+#sidebar
+    top 0px
+    height 100%
+    margin 0px
+    float left
+    display inline
+    background-color color-gray
+    z-index 400
+    font-size 20px
+    box-shadow 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19)
+
+    transition width .75s
+    transition-timing-function cubic-bezier(0, 0, .55, 1)
+
+    @media screen and (min-width: 768px)
+        width 300px
+    @media screen and (max-width: 768px)
+        width 100px
+
+#toggle-menu
+    top 50px
+
+    float left
+    display inline
+
+    color black
+    &:hover
+        color white
+//#menu-container
+//    position relative
+//    transition all 0.5s ease
+//    float left
+//    background-color menu-color
+//    height 100vh
+//    color tcolor
+//    font-size 18px
+//    white-space nowrap
+//    overflow hidden
+//    @media screen and (min-width: 768px)
+//        width 10%
+//    @media screen and (max-width: 768px)
+//        width 20%
+
+.menu
+    padding-left 0
+    display inline
+
+.menu-item
+    line-height 2em
+    color white
+    cursor pointer
+    width 100%
+    overflow hidden
+    transition all 0.25s ease
+    div
+        width 90%
+        padding-left 16px
+    > a
+        width 100%
+        opacity 0.6
+        color white
+        display list-item
+        &:hover
+                opacity 1
+                background-color darken(color-gray,15%)
+    > ul
+        padding-left 0px !important
+        > li
+            margin-left 0px !important
+            padding-left 2em !important
+            &:hover
+                opacity 1
+                background-color darken(color-gray,15%)
+
+.menu-close
+    width 0% !important
+
+.noselect
+        touch-callout none
+        user-select none
+.menu-icon
+    padding-left 10px
+.active
+    opacity 1 !important
