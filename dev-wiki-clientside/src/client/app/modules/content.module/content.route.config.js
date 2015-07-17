@@ -17,13 +17,13 @@
             .state('home.articles.read', {
                 url: '/read',
                 views: {
-                    'test': {template: 'read'}
+                    'article.body': {template: 'read'}
                 }
             })
             .state('home.articles.write', {
                 url: '/write',
                 views: {
-                    'article.body@home.articles.write': {template: 'write'}
+                    'article.body': {template: '<ang-article-editor></ang-article-editor>'}
                 }
             });
     }

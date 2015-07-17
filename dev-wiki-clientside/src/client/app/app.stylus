@@ -68,6 +68,8 @@ ul
     background-color #fff
     transition box-shadow .25s
     border-radius 2px
+    > div
+        margin 10px 40px 10px 40px
 
 .btn-floating, .btn-floating-small
     background-color main-color-lighten-1

@@ -50,6 +50,9 @@ ul > li {
           transition: box-shadow 0.25s;
   border-radius: 2px;
 }
+.card > div {
+  margin: 10px 40px 10px 40px;
+}
 .btn-floating,
 .btn-floating-small {
   background-color: #00b6a5;

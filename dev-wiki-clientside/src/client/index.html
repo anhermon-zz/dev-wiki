@@ -15,8 +15,8 @@
         <!-- inject:css -->
         <link rel="stylesheet" href="/.tmp/app/app.css">
         <link rel="stylesheet" href="/.tmp/app/modules/content.module/content.css">
-        <link rel="stylesheet" href="/.tmp/app/modules/menu.module/menu.css">
         <link rel="stylesheet" href="/.tmp/app/modules/core.module/core.css">
+        <link rel="stylesheet" href="/.tmp/app/modules/menu.module/menu.css">
         <link rel="stylesheet" href="/.tmp/app/modules/security.module/security.css">
         <!-- endinject -->
    </head>
@@ -35,11 +35,11 @@
         <!-- endbower -->
 
         <!-- inject:js -->
-        <script src="/src/client/app/modules/common.module/common.module.js"></script>
         <script src="/src/client/app/modules/content.module/content.module.js"></script>
         <script src="/src/client/app/modules/core.module/core.module.js"></script>
         <script src="/src/client/app/modules/menu.module/menu.module.js"></script>
         <script src="/src/client/app/modules/security.module/security.module.js"></script>
+        <script src="/src/client/app/modules/common.module/common.module.js"></script>
         <script src="/src/client/app/modules/content.module/content.route.config.js"></script>
         <script src="/src/client/app/modules/core.module/core.controller.js"></script>
         <script src="/src/client/app/modules/core.module/core.route.config.js"></script>
@@ -48,16 +48,20 @@
         <script src="/src/client/app/modules/security.module/security.config.js"></script>
         <script src="/src/client/app/modules/security.module/security.constants.js"></script>
         <script src="/src/client/app/modules/security.module/security.route.config.js"></script>
-        <script src="/src/client/app/modules/common.module/services/common.logger.service.js"></script>
-        <script src="/src/client/app/modules/content.module/controllers/content.main.controller.js"></script>
-        <script src="/src/client/app/modules/content.module/services/content.service.js"></script>
-        <script src="/src/client/app/modules/content.module/directives/content.main.directive.js"></script>
-        <script src="/src/client/app/modules/core.module/controllers/core.route.traverse.controller.js"></script>
         <script src="/src/client/app/modules/core.module/directives/core.animate.directives.js"></script>
         <script src="/src/client/app/modules/core.module/directives/core.directive.js"></script>
         <script src="/src/client/app/modules/core.module/directives/core.route.trav.directive.js"></script>
+        <script src="/src/client/app/modules/core.module/controllers/core.route.traverse.controller.js"></script>
+        <script src="/src/client/app/modules/content.module/controllers/content.article.editor.controller.js"></script>
+        <script src="/src/client/app/modules/content.module/controllers/content.main.controller.js"></script>
+        <script src="/src/client/app/modules/content.module/directives/content.article.editor.directive.js"></script>
+        <script src="/src/client/app/modules/content.module/directives/content.main.directive.js"></script>
         <script src="/src/client/app/modules/menu.module/directives/menu.directive.js"></script>
         <script src="/src/client/app/modules/menu.module/directives/menuItem.directive.js"></script>
+        <script src="/src/client/app/modules/security.module/services/auth.service.js"></script>
+        <script src="/src/client/app/modules/security.module/services/interceptor.service.js"></script>
+        <script src="/src/client/app/modules/security.module/services/security.event.service.js"></script>
+        <script src="/src/client/app/modules/security.module/services/user.service.js"></script>
         <script src="/src/client/app/modules/security.module/controllers/security.core.controller.js"></script>
         <script src="/src/client/app/modules/security.module/controllers/security.login.controller.js"></script>
         <script src="/src/client/app/modules/security.module/controllers/security.register.controller.js"></script>
@@ -65,10 +69,8 @@
         <script src="/src/client/app/modules/security.module/directives/permission.dirctive.js"></script>
         <script src="/src/client/app/modules/security.module/directives/register.directive.js"></script>
         <script src="/src/client/app/modules/security.module/directives/role.directive.js"></script>
-        <script src="/src/client/app/modules/security.module/services/auth.service.js"></script>
-        <script src="/src/client/app/modules/security.module/services/interceptor.service.js"></script>
-        <script src="/src/client/app/modules/security.module/services/security.event.service.js"></script>
-        <script src="/src/client/app/modules/security.module/services/user.service.js"></script>
+        <script src="/src/client/app/modules/common.module/services/common.logger.service.js"></script>
+        <script src="/src/client/app/modules/content.module/services/content.service.js"></script>
         <script src="/src/client/app/app.module.js"></script>
         <script src="/src/client/app/config/app.config.js"></script>
         <script src="/src/client/app/config/app.exceptionHandlerConfig.js"></script>
